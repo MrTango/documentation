@@ -935,9 +935,14 @@ Prisma
 
     Prisma consists of three main components:
 
-    -   Prisma Client: An auto-generated query builder that allows developers to interact with the database using a type-safe API.
-    -   Prisma Migrate: A migration tool that helps manage database schema changes over time.
-    -   Prisma Studio: A visual interface for exploring and managing data in the database.
+    Prisma Client
+    :    An auto-generated query builder that allows developers to interact with the database using a type-safe API.
+
+    Prisma Migrate
+    :    A migration tool that helps manage database schema changes over time.
+
+    Prisma Studio
+    :    A visual interface for exploring and managing data in the database.
 
     Prisma supports various databases, including PostgreSQL, MySQL, SQLite, SQL Server, and MongoDB.
 
