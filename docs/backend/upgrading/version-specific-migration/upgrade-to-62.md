@@ -91,3 +91,11 @@ This is because we keep a mapping from the old to the new location.
 For example, `plone.locking` registers that `plone.locking.browser.info.pt` has a new location, `plone.app.layout.viewlets.locking.pt`.
 You should rename your override to the new location if you no longer need compatibility with Plone 6.1 or earlier.
 ```
+
+## TinyMCE 8 for Classic UI
+
+The {term}`WYSIWYG` editor for Classic UI, {term}`TinyMCE`, was updated to version 8.
+
+You're now able to enter your commercial license key in the {menuitem}`TinyMCE` control panel.
+
+See {doc}`/classic-ui/tinymce-customization` for setup instructions.
