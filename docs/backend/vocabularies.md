@@ -339,7 +339,7 @@ The easiest way to create a vocabulary in a Plone add-on is using `plonecli` wit
 ### Installation
 
 ```bash
-pip install plonecli
+UV tool install plonecli
 ```
 
 ### Creating an Add-on with a Vocabulary
