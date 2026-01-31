@@ -66,7 +66,7 @@ METAL (Macro Expansion for TAL)
 Templates in Plone can be stored in two locations, with important security implications:
 
 **Filesystem templates** (recommended)
-:   Templates stored in your add-on package's directory structure, typically in `browser/templates/`.
+:   Templates stored in your add-on package's directory structure, typically in `browser/templates/` or `views`.
     These templates run as **trusted code** with full Python capabilities, just like any other code in your package.
     They have no security restrictions on Python expressions.
 
@@ -287,7 +287,7 @@ Provides error handling for template expressions.
 
 ### Pure TAL blocks
 
-When you need TAL logic without generating HTML elements, use the `tal:block` element:
+When you need TAL logic without generating HTML elements, use the `tal:block` style elements:
 
 ```html
 <tal:block define="items context/@@folderListing">
@@ -815,7 +815,7 @@ class MyView(BrowserView):
 
 ### Write readable templates
 
-Use meaningful variable names and add comments:
+Use meaningful variable names:
 
 ```html
 <tal:block define="
@@ -827,7 +827,6 @@ Use meaningful variable names and add comments:
         review_state='published',
     )[:5];
 ">
-  <!-- Display the 5 most recent published news items -->
   <ul class="news-listing">
     <li tal:repeat="brain recent_news">
       <a href="${brain/getURL}">${brain/Title}</a>
@@ -878,12 +877,12 @@ Handle missing or empty values gracefully:
 
 ### Inspecting available variables
 
-Use `econtext` to see all available variables:
+Use `context` to see all available variables:
 
 ```html
-<dl tal:repeat="name python:sorted(econtext.keys())">
+<dl tal:repeat="name python:sorted(context.keys())">
   <dt>${name}</dt>
-  <dd>${python:repr(econtext[name])[:100]}</dd>
+  <dd>${python:repr(context[name])[:100]}</dd>
 </dl>
 ```
 
