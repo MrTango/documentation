@@ -44,7 +44,7 @@ Here is a minimal example:
 </html>
 ```
 
-The three template languages serve different purposes:
+The three parts serve different purposes:
 
 TAL (Template Attribute Language)
 :   Controls the structure and content of the output.
